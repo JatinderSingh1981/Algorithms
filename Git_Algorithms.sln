@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30011.22
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Git_Algorithms_Tests", "Git_Algorithms_Tests.csproj", "{E80E4118-CC4F-47E1-B37E-4E51C5347405}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Git_Algorithms_Tests", "Git_Algorithms_UnitTests\Git_Algorithms_Tests.csproj", "{2B7D123B-B5F3-4DC5-8D0A-538E2836D54E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Git_Alogrithms", "..\Git_Alogrithms\Git_Alogrithms.csproj", "{B3F7FED6-A445-4593-98C8-22FEC3C52B2B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Git_Alogrithms", "Git_Alogrithms\Git_Alogrithms.csproj", "{FD85FC2C-DF5E-4E8B-8598-C1437A530300}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,14 +13,14 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{E80E4118-CC4F-47E1-B37E-4E51C5347405}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E80E4118-CC4F-47E1-B37E-4E51C5347405}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E80E4118-CC4F-47E1-B37E-4E51C5347405}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E80E4118-CC4F-47E1-B37E-4E51C5347405}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B3F7FED6-A445-4593-98C8-22FEC3C52B2B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B3F7FED6-A445-4593-98C8-22FEC3C52B2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B3F7FED6-A445-4593-98C8-22FEC3C52B2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B3F7FED6-A445-4593-98C8-22FEC3C52B2B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2B7D123B-B5F3-4DC5-8D0A-538E2836D54E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B7D123B-B5F3-4DC5-8D0A-538E2836D54E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B7D123B-B5F3-4DC5-8D0A-538E2836D54E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2B7D123B-B5F3-4DC5-8D0A-538E2836D54E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD85FC2C-DF5E-4E8B-8598-C1437A530300}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD85FC2C-DF5E-4E8B-8598-C1437A530300}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD85FC2C-DF5E-4E8B-8598-C1437A530300}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD85FC2C-DF5E-4E8B-8598-C1437A530300}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
