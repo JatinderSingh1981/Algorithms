@@ -1,49 +1,13 @@
-using System;
+﻿using System;
 using System.Linq;
 using Xunit;
 using Git_Alogrithms;
 using System.Collections.Generic;
 
-namespace Git_Algorithms
+namespace Git_Algorithms_Tests
 {
-    public class Alogrithm_Tests
+    public class WorstLosingStreak_Tests
     {
-        [Theory]
-        [InlineData(new int[] { 1, 2, 1 }, 1, 1)]
-        [InlineData(new int[] { 1, 2, 1 }, 4, 5)]
-        public void TestCountingSubarrays(int[] listToSearch, int x, int y)
-        {
-            var result = CountingSubarrays.countingSubarrays(listToSearch, listToSearch.Length, x, y);
-
-            Assert.Equal(result, 6);
-        }
-
-        [Theory]
-        [InlineData(new int[] { 1, 2, 1 }, 1, 2)]
-        public void TestCountingSubarrays2(int[] listToSearch, int x, int y)
-        {
-            var result = CountingSubarrays.countingSubarrays(listToSearch, listToSearch.Length, x, y);
-
-            Assert.Equal(result, 2);
-        }
-
-
-        //int[] arr = { 1, 2, 2, 3, 4, 1 };
-        //int[] arr = { 4,4,2,2,4,2 };
-        //int[] arr = { 4, 2, 2, 4, 2, 2 };
-
-        [Theory]
-        [InlineData(new int[] { 4, 4, 2, 2, 4, 2 }, 2, 4)]
-        //[InlineData(new int[] { 1, 2, 1 }, 4, 5)]
-        public void TestCountingUniversalArrays(int[] listToSearch, int x, int y)
-        {
-            List<int> list = new List<int> { 1, 2, 3, 4, 5 };
-            var result = CountingUniveralSubarrays.countingUniveralSubarrays(listToSearch, listToSearch.Length, x, y);
-
-            Assert.Equal(result, 4);
-        }
-
-
         [Theory]
         [InlineData(new int[] { 7, 4, 2, 9 })]
         public void TestWorstLosingStreak(int[] losingStreakArray)
@@ -82,8 +46,5 @@ namespace Git_Algorithms
 
             Assert.Equal(result, 971);
         }
-
-
-
     }
 }
