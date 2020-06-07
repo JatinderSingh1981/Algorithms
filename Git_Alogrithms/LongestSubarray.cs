@@ -27,13 +27,6 @@ namespace Git_Alogrithms
             int subArrayCount = 0;
             int maxSubArrayValue = 0;
             int valueJ = 0;
-            /*for(int i=0;i<arr.Count();i++)
-			{
-				Console.WriteLine("Value of i == " + arr[i]);
-
-
-			}
-			return 0;*/
             for (int i = 0; i < arr.Count(); i++)
             {
                 //Console.WriteLine("Value at i == " + i + " of " + arr[i]);
@@ -41,11 +34,14 @@ namespace Git_Alogrithms
                 for (int j = i + 1; j < arr.Count(); j++)
                 {
                     //Console.WriteLine("Value of i == " + arr[i] + " Value of j == " + j + " value of subArrayCount == " + subArrayCount);
+
                     //Save the current value of j. We will need this to move i ahead.
                     //Remember we don't need to iterate the array part which we already have iterated
                     valueJ = j;
                     if (arr[i] == arr[j] || (arr[i] + 1 == arr[j]) || (arr[i] - 1 == arr[j]))
                     {
+                        //We need to increment the value by 2 for the first time because remember our
+                        //1st element is in array[i] and 2nd element is in array[j]
                         if (subArrayCount == 0)
                             subArrayCount = 2;
                         else
@@ -58,12 +54,13 @@ namespace Git_Alogrithms
                         break;
                     }
                 }
-                //If we have not reached the end of the subarray then skip the outer array and start the iteration of the subarray
+                //If we have not reached the end of the subarray then move the outer array ahead else we are done. We don't need to re-iterate the arrays
                 if (valueJ != arr.Count() - 1)
                     i = valueJ - 1;
                 //Console.WriteLine("***********");
                 //Console.WriteLine("Value at i == " + i);//+ " of " + arr[i]);
-                //If count has exceeded the value we already have set the value in the variable
+
+                //If subArrayCount has exceeded the maxSubArrayValue we already have, then set the value in the maxSubArrayValue variable
                 if (subArrayCount > maxSubArrayValue)
                 {
                     maxSubArrayValue = subArrayCount;
