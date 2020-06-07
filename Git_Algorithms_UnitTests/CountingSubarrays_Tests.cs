@@ -9,22 +9,14 @@ namespace Git_Algorithms
     public class CountingSubarrays_Tests
     {
         [Theory]
-        [InlineData(new int[] { 1, 2, 1 }, 1, 1)]
-        [InlineData(new int[] { 1, 2, 1 }, 4, 5)]
-        public void TestCountingSubarrays(int[] listToSearch, int x, int y)
+        [InlineData(new int[] { 1, 2, 1 }, 1, 1, 6)]
+        [InlineData(new int[] { 1, 2, 1 }, 4, 5, 6)]
+        [InlineData(new int[] { 1, 2, 1 }, 1, 2, 2)]
+        public void TestCountingSubarrays(int[] listToSearch, int x, int y, int expectedValue)
         {
             var result = CountingSubarrays.countingSubarrays(listToSearch, listToSearch.Length, x, y);
 
-            Assert.Equal(result, 6);
-        }
-
-        [Theory]
-        [InlineData(new int[] { 1, 2, 1 }, 1, 2)]
-        public void TestCountingSubarrays2(int[] listToSearch, int x, int y)
-        {
-            var result = CountingSubarrays.countingSubarrays(listToSearch, listToSearch.Length, x, y);
-
-            Assert.Equal(result, 2);
+            Assert.Equal(result, expectedValue);
         }
     }
 }
