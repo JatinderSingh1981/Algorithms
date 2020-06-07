@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 namespace Git_Algorithms_Tests
 {
-    public class NiceTeamsTest
+    public class NiceTeams_Tests
     {
         [Theory]
         [InlineData(new int[] { 1, 4, 7, 10, 13, 16, 19, 22, 23, 24, 25 }, 3)]
