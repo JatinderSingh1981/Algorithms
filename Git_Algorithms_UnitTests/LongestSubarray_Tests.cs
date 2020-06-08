@@ -21,5 +21,19 @@ namespace Git_Algorithms_Tests
 
             Assert.Equal(result, expectedValue);
         }
+
+        [Theory]
+        [InlineData(new int[] { 2, 2, 1 }, 3)]
+        [InlineData(new int[] { 1, 2, 3, 4, 5 }, 2)]
+        [InlineData(new int[] { 0, 1, 2, 1, 2, 3 }, 4)]
+        [InlineData(new int[] { 1, 1, 1, 3, 3, 3, 2, 2 }, 5)]
+        [InlineData(new int[] { 1, 1, 1, 1, 1, 3, 3, 2, 2 }, 5)]
+        [InlineData(new int[] { 1, 1, 1, 3, 3, 2, 2 }, 4)]
+        public void TestLongestSubArraySimpleAlgo(int[] teams, int expectedValue)
+        {
+            var result = LongestSubarray.longestSubarraySimpleAlgo(teams.ToList());
+
+            Assert.Equal(result, expectedValue);
+        }
     }
 }

@@ -70,5 +70,46 @@ namespace Git_Alogrithms
             }
             return maxSubArrayValue;
         }
+
+        public static int longestSubarraySimpleAlgo(List<int> arr)
+        {
+            int subArrayCount = 0;
+            int maxSubArrayValue = 0;
+            int i = 0;
+
+
+            for (int j = 1; j < arr.Count(); j++)
+            {
+
+                //Save the current value of j. We will need this to move i ahead.
+                //Remember we don't need to iterate the array part which we already have iterated
+                if (arr[i] == arr[j] || (arr[i] + 1 == arr[j]) || (arr[i] - 1 == arr[j]))
+                {
+                    //We need to increment the value by 2 for the first time because remember our
+                    //1st element is in array[i] and 2nd element is in array[j]
+                    if (subArrayCount == 0)
+                        subArrayCount = 2;
+                    else
+                        subArrayCount++;
+                }
+                else
+                {
+                    //If we have not reached the end of the subarray then move the i ahead else we are done.
+                    if (j != arr.Count() - 1)
+                    {
+                        i = j;
+                        subArrayCount = 0;
+                    }
+                }
+
+                //If subArrayCount has exceeded the maxSubArrayValue we already have, then set the value in the maxSubArrayValue variable
+                if (subArrayCount > maxSubArrayValue)
+                {
+                    maxSubArrayValue = subArrayCount;
+
+                }
+            }
+            return maxSubArrayValue;
+        }
     }
 }
